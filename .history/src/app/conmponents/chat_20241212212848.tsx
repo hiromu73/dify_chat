@@ -1,0 +1,17 @@
+
+
+import { Box } from '@mui/material'
+import React from 'react'
+import Textfield from './textfield'
+import Chatmessage from './chatmessage'
+const chat = () => {
+  return (
+    <>
+      <box></box>
+      <Box sx={{ display: 'flex', alignItems: 'center', overflow: 'hidden', height: '70vh', width: '100%' }}>
+      <Chatmessage/>
+    </Box><Textfield /></>
+  )
+}
+
+export default chat

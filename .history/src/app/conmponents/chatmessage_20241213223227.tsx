@@ -1,0 +1,11 @@
+
+
+import React from 'react'
+
+const chatmessage = () => {
+  return (
+    <Box style={{width: '100%', height: '100%', }}>chatmessage</Box>
+  )
+}
+
+export default chatmessage

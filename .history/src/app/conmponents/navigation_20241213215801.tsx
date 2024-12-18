@@ -1,0 +1,51 @@
+"use client";
+import { AppBar, Box, colors, Container, Link, Toolbar, Typography } from "@mui/material";
+import React from "react";
+
+const NavigationBar = () => {
+  return (
+    <Box
+      sx={{
+        width: '100%',
+        maxWidth: 'calc(100% - 2rem)', // Containerのpadding(p: 1)を考慮
+        margin: '0 auto',
+      }}
+    >
+      <AppBar
+      position="fixed"
+        // color="inherit"
+        // enableColorOnDark
+
+      sx={{
+        width: '100%',
+        maxWidth: 'calc(100% - 2rem)', // Containerのpadding(p: 1)を考慮
+        margin: '0 auto',
+        // bgcolor: (theme) => theme.palette.background.paper
+        // backgroundColor: colors.common.black
+                [`& 。MuiAppBar-colorDefault`]: {
+          width: drawerWidth,
+          boxSizing: "border-box",
+          // bgcolor: (theme) => theme.palette.primary.dark,
+        },
+      }}
+    >
+        <Toolbar disableGutters sx={{
+            display: 'flex',
+            justifyContent: 'center', // 中央寄せ
+          }}
+        >
+          <Typography variant="h6" component="div"
+            noWrap
+          >
+            <Link href="/" underline="none" color="inherit" >
+              debeateApp
+            </Link>
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </Box>
+
+  );
+};
+
+export default NavigationBar;
