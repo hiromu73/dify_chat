@@ -19,8 +19,12 @@ import CreateRoundedIcon from '@mui/icons-material/CreateRounded';
 import React, { useState } from "react";
 
 const drawerWidth = 240;
+interface SideBarProps {
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
+}
 
-const SideBar = () => {
+const SideBar = ({ isOpen, setIsOpen }: SideBarProps ) => {
   const rows = [
     '1',
     '2',
@@ -35,9 +39,7 @@ const SideBar = () => {
     '11',
     '12',
   ]
-
-  const [window, setWindow] = useState(true);
-  if (!window) {
+  if (!isOpen) {
     return null;
   }
 
@@ -56,7 +58,7 @@ const SideBar = () => {
     >
       <Box sx={{ p: 2, width: '100%' ,display: 'flex', alignItems: 'center'}}>
         <IconButton edge="start" sx={{ mr: 20 }}>
-          <MenuIcon onClick={() => {setWindow(!window)}}/>
+          <MenuIcon onClick={() => {setIsOpen(!isOpen)}}/>
         </IconButton>
         <IconButton edge="start" sx={{ mr: 2 }}>
           <CreateRoundedIcon />

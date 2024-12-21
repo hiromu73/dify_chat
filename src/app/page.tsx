@@ -12,13 +12,8 @@ import {
 } from "@mui/material";
 
 import Chat from "./conmponents/chat";
-import Navigation  from "./conmponents/navigation";
-import SideBar from "./conmponents/sidebar";
-import Header from "./conmponents/header";
-import Chatmessage from "./conmponents/chatare";
-import Textfield from "./conmponents/textfield";
 export default function Home() {
-  // 共通テーマの取得
+
   const theme = useTheme();
   return (
     <ThemeProvider theme={theme}>

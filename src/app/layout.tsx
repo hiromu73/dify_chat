@@ -74,7 +74,6 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <ThemeProvider theme={darkTheme}>
           <Box sx={{ display: "flex" }}>
-            {/* defalut CSSのリセット */}
             <CssBaseline />
             <Box component="main" sx={{ flexGrow: 1, width: '100%' }}>
               {children}

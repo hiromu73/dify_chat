@@ -1,23 +1,19 @@
 
 
-import { AppBar, Avatar, Box, ButtonBase, Container, CssBaseline, IconButton, Toolbar, Typography } from '@mui/material'
+import { Avatar, Box, IconButton, Typography } from '@mui/material'
 import { Menu as MenuIcon } from '@mui/icons-material';
 import React from 'react'
-import { log } from 'console';
 
 // propsの型定義
 interface HeaderProps {
-  setIsOpen: (isOpen: boolean) => void;
   isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
 }
 
-console.log
-
-const header = ({ setIsOpen, isOpen }: HeaderProps) => {
+const header = ({ isOpen, setIsOpen }: HeaderProps) => {
   return (
-    // <CssBaseline />
     <Box sx={{ p: 2, bgcolor: (theme) => theme.palette.background.paper, width: '100%', display: 'flex', alignItems: 'center' }}>
-      {isOpen &&
+      {!isOpen &&
         <IconButton edge="start" color="inherit" onClick={() => setIsOpen(!isOpen)} sx={{ mr: 2 }}>
           <MenuIcon />
         </IconButton>
